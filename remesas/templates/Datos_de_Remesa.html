@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Datos de Remesa</h1>
+  
+<ul>
+  {% for x in myusuarios %}
+    <li>{{ x.Usuario }} {{ x.Orden }}</li>
+  {% endfor %}
+</ul>
+
+
+<h1>{{ myusuarios.Usuario }} {{ myusuarios.Orden }}</h1>
+  
+<p>Phone: {{ myusuarios.phone }}</p>
+<p>Firstname: {{ myusuarios.firstname }}</p>
+<p>Cantidad:{{ myusuarios.euros}}</p>
+<p>IBAN:{{ myusuarios.IBAN}}</p>
+<p>Beneficiario: {{ myususarios.Pelerin}}</p>
+<p>Concepto:{{myusuarios.concep}}</p>
+<p>Bank:{{myusuarios.Banque}}</p>
+<p>BIC/SWIFT:{{ myusuarios.BIC}}</p>
+
+<p>Go to <a href="/remesas">Confirm</a></p>
+
+
+</body>
+</html>

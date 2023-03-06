@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Members</h1>
+  
+<ul>
+  {% for x in myusuarios %}
+    <li><a href="Datos_de_Remesa/{{ x.Orden }}">{{ x.Usuario }} {{ x.Orden }}</a></li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
