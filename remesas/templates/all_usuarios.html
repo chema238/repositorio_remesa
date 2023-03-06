@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "master.html" %}
 
-<h1>Members</h1>
+{% block title %}
+ Datos a rellenar por el usuario
+{% endblock %}
+
+
+{% block content %}
+  <h1>Members</h1>
   
-<ul>
-  {% for x in myusuarios %}
-    <li><a href="Datos_de_Remesa/{{ x.Orden }}">{{ x.Usuario }} {{ x.Orden }}</a></li>
-  {% endfor %}
-</ul>
-
-</body>
-</html>
+  <ul>
+    {% for x in mymembers %}
+      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
