@@ -1,16 +1,11 @@
+{% comment "" %}{% extends "master.html" %}{% endcomment %}
+
 <!DOCTYPE html>
 <html>
 <body>
-
-<h1>Datos de Remesa</h1>
-  
 <ul>
-  {% for x in myusuarios %}
-    <li>{{ x.Usuario }} {{ x.Orden }}</li>
-  {% endfor %}
+    {{id}}
 </ul>
-
-
 <h1>{{ myusuarios.Usuario }} {{ myusuarios.Orden }}</h1>
   
 <p>Phone: {{ operacion.phone }}</p>
@@ -21,8 +16,6 @@
 <p>Concepto:{{operacion.concepto}}</p>
 <p>Bank:{{operacion.Bank}}</p>
 <p>BIC/SWIFT:{{ operacion.BIC_SWIFT}}</p>
-
-<p>Go to <a href="/remesas">Confirm</a></p>
 
 </body>
 </html>

@@ -11,11 +11,20 @@ def remesas(request):
     }
     return HttpResponse(template.render(context,request))
 # Create your views here.
-def presentacion(request, Orden):
-  operacion = Member.objects.get(Orden=Orden)
-  template = loader.get_template('Datos_de_Remesa.html')
+
+def clientes(request, id):
+  operacion = Member.objects.get(id=id)
+  template = loader.get_template('clientes.html')
   context = {
-    'operacion': operacion,
+       "operacion": operacion,
+  }
+  return HttpResponse(template.render(context, request))
+
+def details(request, id):
+  myusuarios = Member.objects.get(id=id)
+  template = loader.get_template('details.html')
+  context = {
+    'myusuarios': myusuarios,
   }
   return HttpResponse(template.render(context, request))
 

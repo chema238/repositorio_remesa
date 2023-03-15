@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Datos de Usuario</h1>
+  
+<ul>
+  {% for x in myusuarios %}
+    <li>{{ x.Usuario }} {{ x.Orden }}</li>
+  {% endfor %}
+</ul>
+
+
+
+
+<p>Go to <a href="/remesas">Confirm</a></p>
+
+</body>
+</html>

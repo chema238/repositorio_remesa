@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Datos de Usuario</h1>
+  
+<ul>
+  {% for x in myusuarios %}
+    <li><a hfer="detail/{{x.id}}">{{ x.Usuario }} {{ x.Orden }}</a></li>
+  {% endfor %}
+</ul>
+</body>
+</html>

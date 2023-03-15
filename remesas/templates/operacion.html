@@ -6,11 +6,11 @@
 
 
 {% block content %}
-  <h1>Members</h1>
+  <h2>Usuario</h2>
   
   <ul>
-    {% for x in mymembers %}
-      <li><a href="details/{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</a></li>
+    {% for x in presentacion %}
+      <li><a href="Datos_de_Remesa/{{ x.id }}">{{ x.Usuario }} {{ x.Orden }}</a></li>
     {% endfor %}
   </ul>
 {% endblock %}
