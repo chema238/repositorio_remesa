@@ -2,18 +2,17 @@
 <html>
 <body>
 
-<h1>Datos de Usuario</h1>
+  <p>The queryset object:</p>
+
+  {{ usuarios }}
   
-<ul>
-  {% for x in myusuarios %}
-    <li>{{ x.Usuario }} {{ x.Orden }}</li>
-  {% endfor %}
-</ul>
-
-
-
-
-<p>Go to <a href="/remesas">Confirm</a></p>
+  <p>Loop through the items:</p>
+  
+  <table border='1'>
+    {% for x in usuarios %}
+      <tr>
+        <td>{{ x }}</td>
+      </tr>
 
 </body>
 </html>

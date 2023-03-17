@@ -1,21 +1,20 @@
-{% comment "" %}{% extends "master.html" %}{% endcomment %}
+{% extends "master.html" %}
 
-<!DOCTYPE html>
-<html>
-<body>
-<ul>
-    {{id}}
-</ul>
-<h1>{{ myusuarios.Usuario }} {{ myusuarios.Orden }}</h1>
+{% block title %}
+Details about {{ usuarios.Usuario }}{{ usuarios.Orden}}
+{% endblock %}
+
+{%bock content %}
+  <h1>{{ usuarios.Usuario }} {{ usuarios.Orden }}</h1>
   
-<p>Phone: {{ operacion.phone }}</p>
-<p>Firstname: {{ operacion.firstname }}</p>
-<p>Cantidad:{{ operacion.Cantidad}}</p>
-<p>IBAN:{{ operacion.IBAN}}</p>
-<p>Beneficiario: {{ operacion.Beneficiario}}</p>
-<p>Concepto:{{operacion.concepto}}</p>
-<p>Bank:{{operacion.Bank}}</p>
-<p>BIC/SWIFT:{{ operacion.BIC_SWIFT}}</p>
+  <p>Phone: {{ usuarios.phone }}</p>
+  <p>Firstname: {{ usuarios.firstname }}</p>
+  <p>Cantidad:{{ usuarios.Cantidad}}</p>
+  <p>IBAN:{{ usuarios.IBAN}}</p>
+  <p>Beneficiario: {{ usuarios.Beneficiario}}</p>
+  <p>Concepto:{{ usuarios.concepto}}</p>
+  <p>Bank:{{ usuarios.Bank}}</p>
+  <p>BIC:{{ usuarios.BIC}}</p>
 
-</body>
-</html>
+  <p>Back to <a href="/remesas">remesas</a></p>
+{% endblock %}

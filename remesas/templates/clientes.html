@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html>
-<body>
+{% extends "master.html" %}
 
-<h1>Datos de Usuario</h1>
+{% block title %}
+
+Remesas lista de Clientes
+{% endblock %}
+
+{% block content %}
+
+<p><a href="/">HOME</a></p>
+
+<h3>Clientes:</h3>
   
 <ul>
-  {% for x in myusuarios %}
-    <li><a hfer="detail/{{x.id}}">{{ x.Usuario }} {{ x.Orden }}</a></li>
+  {% for x in usuarios %}
+    <li><a hfer="details/{{x.id}}">{{ x.Usuario }} {{ x.Orden }}</a></li>
   {% endfor %}
 </ul>
-</body>
-</html>
+{% endblock%}

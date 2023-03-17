@@ -1,33 +1,33 @@
+from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from .models import Member
 
-
 def remesas(request):
-    myusuarios=Member.objects.all().values()
-    template = loader.get_template('Datos_de_Remesa.html')
+    usuarios= Member.objects.all().values()
+    template =loader.get_template('clientes.html')
     context={
-        "myusuarios": myusuarios,
+        'usuarios': usuarios,
     }
-    return HttpResponse(template.render(context,request))
-# Create your views here.
-
-def clientes(request, id):
-  operacion = Member.objects.get(id=id)
-  template = loader.get_template('clientes.html')
-  context = {
-       "operacion": operacion,
-  }
-  return HttpResponse(template.render(context, request))
+    return HttpResponse(template.render(context, request))
 
 def details(request, id):
-  myusuarios = Member.objects.get(id=id)
-  template = loader.get_template('details.html')
-  context = {
-    'myusuarios': myusuarios,
-  }
-  return HttpResponse(template.render(context, request))
+    usuarios = Member.objects.get(id=id)
+    template = loader.get_template('detail.html')
+    context={
+        'usuarios': usuarios,
+    }
+    return HttpResponse(template.render(context, request))
 
 def main(request):
-   template = loader.get_template('main.html')
-   return HttpResponse(template.render())
+    template =loader.get_template("main.html")
+    return HttpResponse(template.render())
+
+def Datos(request):
+    mydata= Member.objects.values_list('orden')
+    template =loader.get_template('datos.html')
+    context={
+        'usuarios': mydata,
+    }
+    return HttpResponse(template.render(context,request))
+#Crear aquí las vistas.
